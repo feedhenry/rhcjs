@@ -16,4 +16,8 @@ module.exports = nock('https://openshift.redhat.com')
 .times(2)
 .reply(200, datareply, headers)
 .delete('/broker/rest/application/1a')
+.reply(200, datareply, headers)
+.get('/broker/rest/user/keys', '*')
+.reply(200, datareply, headers)
+.post('/broker/rest/user/keys', '*')
 .reply(200, datareply, headers);

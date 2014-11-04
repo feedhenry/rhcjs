@@ -39,6 +39,20 @@ module.exports = {
       return done();
     });
   },
+  'it should add an ssh key' : function(done){
+    rhc.ssh.add({name : 'foo', content : '1a'}, function(err, res){
+      assert.ok(!err, err);
+      assert.ok(res);
+      return done();
+    });
+  },
+  'it should list ssh keys' : function(done){
+    rhc.ssh.list({name : 'foo', content : '1a'}, function(err, res){
+      assert.ok(!err, err);
+      assert.ok(res);
+      return done();
+    });
+  },
   tearDown : function(fin){
     fixtures.done();
     return fin();

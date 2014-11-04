@@ -17,6 +17,7 @@ function rhc(params){
   }
   
   this.app = require('./lib/app')(this);
+  this.ssh = require('./lib/ssh')(this);
 }
 
 rhc.prototype.apps = require('./lib/apps.js');
