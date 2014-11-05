@@ -26,20 +26,27 @@ OpenShift Node.js module for interfacing with OpenShift from Node.js.
 ### Show App Info
     
     rhc.app.show({ app : 'Some app name' }, function(err, res){
-      // Res will be an array of apps
+      // Res will be app info
     });	
     
 ### Create App
     
     rhc.app.create({ name : 'Some app name', cartridge : 'Cartridge to create using' }, function(err, res){
-      // Res will be an array of apps
+      
     });	
     
 ### Delete App
     
     rhc.app.del({ app : 'Some app name' }, function(err, res){
-      // Res will be an array of apps
+      
     });	
+
+### Add SSH Key to user account
+		
+		rhc.app.del({ name : 'Ssh key name', content : 'SSH key content' }, function(err, res){
+			
+		});	
+
     
 ## Running Tests
 	
