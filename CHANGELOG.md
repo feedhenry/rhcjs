@@ -1,3 +1,7 @@
+Release 0.3.0 - 2014-11-06 - Cian Clarke
+------------------------------------------------------
+* Add SSH Key Remove support
+
 Release 0.2.0 - 2014-11-06 - Cian Clarke
 ------------------------------------------------------
 * Add configure command

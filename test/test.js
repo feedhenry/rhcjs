@@ -60,6 +60,13 @@ module.exports = {
       return done();
     });
   },
+  'it should remove an ssh key' : function(done){
+    rhc.ssh.remove({name : 'foo'}, function(err, res){
+      assert.ok(!err, err);
+      assert.ok(res);
+      return done();
+    });
+  },
   tearDown : function(fin){
     fixtures.done();
     return fin();

@@ -50,7 +50,13 @@ OpenShift Node.js module for interfacing with OpenShift from Node.js.
 
 ### Add SSH Key to user account
     
-    rhc.app.del({ name : 'Ssh key name', content : 'SSH key content' }, function(err, res){
+    rhc.ssh.add({ name : 'Ssh key name', content : 'SSH key content' }, function(err, res){
+      
+    });  
+
+### Remove an SSH Key
+    
+    rhc.ssh.remove({ name : 'Ssh key name' }, function(err, res){
       
     });  
 
