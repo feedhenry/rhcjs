@@ -39,6 +39,13 @@ module.exports = {
       return done();
     });
   },
+  'it should configure an app' : function(done){
+    rhc.app.configure({app : 'foo', auto_deploy : true}, function(err, res){
+      assert.ok(!err, err);
+      assert.ok(res);
+      return done();
+    });
+  },
   'it should add an ssh key' : function(done){
     rhc.ssh.add({name : 'foo', content : '1a'}, function(err, res){
       assert.ok(!err, err);
