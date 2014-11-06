@@ -1,3 +1,7 @@
+Release 0.4.0 - 2014-11-06 - Cian Clarke
+------------------------------------------------------
+* Modify SSH Key Add type parsing to support multiple types
+
 Release 0.3.0 - 2014-11-06 - Cian Clarke
 ------------------------------------------------------
 * Add SSH Key Remove support

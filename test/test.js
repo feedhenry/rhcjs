@@ -47,14 +47,14 @@ module.exports = {
     });
   },
   'it should add an ssh key' : function(done){
-    rhc.ssh.add({name : 'foo', content : '1a'}, function(err, res){
+    rhc.ssh.add({name : 'foo', key : '1a'}, function(err, res){
       assert.ok(!err, err);
       assert.ok(res);
       return done();
     });
   },
   'it should list ssh keys' : function(done){
-    rhc.ssh.list({name : 'foo', content : '1a'}, function(err, res){
+    rhc.ssh.list({}, function(err, res){
       assert.ok(!err, err);
       assert.ok(res);
       return done();
