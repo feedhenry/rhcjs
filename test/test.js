@@ -67,6 +67,13 @@ module.exports = {
       return done();
     });
   },
+  'it should list cartridges' : function(done){
+    rhc.cartridges(function(err, res){
+      assert.ok(!err, err);
+      assert.ok(res);
+      return done();
+    });
+  },
   tearDown : function(fin){
     fixtures.done();
     return fin();

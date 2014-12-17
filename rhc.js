@@ -21,6 +21,7 @@ function rhc(params){
 }
 
 rhc.prototype.apps = require('./lib/apps.js');
+rhc.prototype.cartridges = require('./lib/cartridges.js');
 
 
 function getDomain(username){
