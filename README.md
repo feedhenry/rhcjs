@@ -39,7 +39,12 @@ OpenShift Node.js module for interfacing with OpenShift from Node.js.
     
 ### Create App
     
-    rhc.app.create({ name : 'Some app name', cartridge : 'Cartridge to create using' }, function(err, res){
+    rhc.app.create({ 
+      name : 'Some app name', 
+      cartridge : 'Cartridge to create using'
+      empty : true|false, // optional - default false. If true, creates with empty git repo
+      fromCode : 'git://somePublicGitRepo' // optional - if set, initialises repo with code pulled from specified public git repo
+     }, function(err, res){
       
     });  
 
