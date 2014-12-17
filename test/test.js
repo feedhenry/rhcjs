@@ -74,6 +74,36 @@ module.exports = {
       return done();
     });
   },
+  'it should start & stop' : function(done){
+    rhc.app.start({app : 'foo'}, function(err, res){
+      assert.ok(!err, err);
+      assert.ok(res);
+      rhc.app.stop({app : 'foo'}, function(err, res){
+        assert.ok(!err, err);
+        assert.ok(res);
+        return done();
+      });
+    });
+  },
+  'it should list env vars' : function(done){
+    rhc.app.env.list({ app : 'foo'}, function(err, res){
+      assert.ok(!err, err);
+      assert.ok(res);
+      return done();
+    });
+  },
+  'it should add & remove env vars' : function(done){
+    rhc.app.env.set({ app : 'foo', vars : [ { name : 'fooz', value : 'bar' } ]}, function(err, res){
+      assert.ok(!err, err);
+      assert.ok(res);
+      rhc.app.env.unset({ app : 'foo', vars : [ { name : 'fooz' } ]}, function(err, res){
+        assert.ok(!err, err);
+        assert.ok(res);
+        return done();
+      });
+      
+    });
+  },
   tearDown : function(fin){
     fixtures.done();
     return fin();

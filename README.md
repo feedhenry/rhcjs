@@ -48,13 +48,35 @@ OpenShift Node.js module for interfacing with OpenShift from Node.js.
     rhc.app.configure({ app : 'Some app name', auto_deploy : true, deployment_branch : 'master' }, function(err, res){
       
     });  
-
+    
+### Manage environment variables
+    
+    // List
+    rhc.app.env.list({ app : 'Some app name'}, function(err, envvars){});
+      
+    // Set  
+    rhc.app.env.set({ 
+      app : 'Some app name',
+      vars : [
+        { name : 'envVarName', value : 'envVarValue'}
+      ]
+    }, function(err, envvars){
+      
+    });
+    
+    // Unset
+    rhc.app.env.unset({ 
+      app : 'Some app name',
+      vars : [
+        { name : 'someVarName' } // note we don't specify the value here to unset
+      ]
+    });
     
 ### Delete App
     
     rhc.app.del({ app : 'Some app name' }, function(err, res){
       
-    });  
+    });
 
 ### Add SSH Key to user account
     
