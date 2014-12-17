@@ -4,18 +4,26 @@ OpenShift Node.js module for interfacing with OpenShift from Node.js.
 
 ## Usage
 
-### Initialize RHC
-  # install module
-  npm install --save rhcjs
+### Install
+    
+    # install module
+    npm install --save rhcjs
+    
+### Usage - Basic Auth
   
-  # then require it
-
-  rhc = require('rhcjs)({
-    username : 'test@test.com',
-    password : 'test123',
-    target : 'openshift.redhat.com', // optional - defaults to openshift.redhat.com
+    var rhc = require('rhcjs)({
+      username : 'test@test.com',
+      password : 'test123',
+      target : 'openshift.redhat.com', // optional - defaults to openshift.redhat.com
       domain : 'test' // optional - if ommitted derrived from email in username
-  });
+    });
+
+### Usage - Bearer Auth
+    
+    var rhc = require('rhcjs)({
+      username : 'test@test.com',
+      token : '1a2b3c', // bearer auth token
+    });
 
 ### List Apps
     
@@ -60,6 +68,18 @@ OpenShift Node.js module for interfacing with OpenShift from Node.js.
       
     });  
 
+### List cartridges
+
+    rhc.cartridges(function(err, res){
+      
+    });  
+  
+### Generate Bearer authentication token (initialise rhcjs using username:password)
+
+    rhc.authorize(function(err, res){
+      
+    });  
+  
     
 ## Running Tests
   

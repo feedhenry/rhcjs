@@ -3,12 +3,13 @@ module.exports = function(params){
 }
 
 function rhc(params){
-  if (!params.username || !params.password){
-    throw new Error('Username and password are required');
+  if ((!params.username || !params.password) && !params.token){
+    throw new Error('Username and password, or an auth token are required');
   }
   
   this.username = params.username;
   this.password = params.password;
+  this.token = params.token;
   this.domain = params.domain || getDomain(params.username);
   this.target = params.target || 'openshift.redhat.com';
   
@@ -22,9 +23,12 @@ function rhc(params){
 
 rhc.prototype.apps = require('./lib/apps.js');
 rhc.prototype.cartridges = require('./lib/cartridges.js');
-
+rhc.prototype.authorize = require('./lib/authorize.js');
 
 function getDomain(username){
+  if (!username){
+    return undefined;
+  }
   var rex = /.+@([^.]+).+/,
   match = username.match(rex);
   if (match.length === 2){
