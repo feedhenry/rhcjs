@@ -104,6 +104,12 @@ module.exports = {
       
     });
   },
+  'it should skip prefetch when an ID is passed' : function(done){
+    // The nock.times call on app show validates this works as expected
+    rhc.app.configure({id : '1a', auto_deploy : true}, function(err, res){
+      return done();
+    });
+  },
   tearDown : function(fin){
     fixtures.done();
     return fin();
