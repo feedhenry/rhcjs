@@ -11,7 +11,7 @@ function rhc(params){
   this.password = params.password;
   this.token = params.token;
   this.domain = params.domain || getDomain(params.username);
-  this.target = params.target || 'openshift.redhat.com';
+  this.target = params.target || 'https://openshift.redhat.com';
   
   if (!this.domain){
     throw new Error('Error - could not determine domain. Specify using domain param.');
