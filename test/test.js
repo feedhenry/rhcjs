@@ -19,7 +19,7 @@ module.exports = {
     });
   },
   'It should create an app' : function(done){
-    rhc.app.create({ name : 'foo', cartridge : 'nodejs' }, function(err, res){
+    rhc.app.create({ name : 'foo', cartridges : ['nodejs'] }, function(err, res){
       assert.ok(!err, err);
       assert.ok(res);
       return done();
