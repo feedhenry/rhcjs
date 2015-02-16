@@ -6,16 +6,17 @@ OpenShift Node.js module for interfacing with OpenShift from Node.js.
 
 ### Initialize RHC
   # install module
-  npm install --save rhcjs
+
+    npm install --save rhcjs
   
   # then require it
 
-  rhc = require('rhcjs)({
-    username : 'test@test.com',
-    password : 'test123',
-    target : 'openshift.redhat.com', // optional - defaults to openshift.redhat.com
-      domain : 'test' // optional - if ommitted derrived from email in username
-  });
+    rhc = require('rhcjs)({
+      username : 'test@test.com',
+      password : 'test123',
+      target : 'openshift.redhat.com', // optional - defaults to openshift.redhat.com
+        domain : 'test' // optional - if ommitted derrived from email in username
+    });
 
 ### List Apps
     
