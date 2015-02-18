@@ -15,7 +15,7 @@ OpenShift Node.js module for interfacing with OpenShift from Node.js.
       username : 'test@test.com',
       password : 'test123',
       target : 'openshift.redhat.com', // optional - defaults to openshift.redhat.com
-      domain : 'test' // optional - if ommitted derrived from email in username
+      domain : 'test' // optional - if ommitted, app operations won't work
     });
 
 ### Usage - Bearer Auth
@@ -23,7 +23,12 @@ OpenShift Node.js module for interfacing with OpenShift from Node.js.
     var rhc = require('rhcjs)({
       username : 'test@test.com',
       token : '1a2b3c', // bearer auth token
+      domain : 'test'
     });
+    
+### Specifying a domain after init
+This is useful when you need to do a list domains before deciding which one to use with the rhc client. 
+
 
 ### List Apps
     
@@ -100,6 +105,18 @@ OpenShift Node.js module for interfacing with OpenShift from Node.js.
     rhc.cartridges(function(err, res){
       
     });  
+
+### List domains
+
+    rhc.domains.list(function(err, res){
+      
+    });  
+    
+### Create domain
+
+    rhc.domains('domainName', function(err, res){
+      
+    });
   
 ### Generate Bearer authentication token (initialise rhcjs using username:password)
 
@@ -109,6 +126,13 @@ OpenShift Node.js module for interfacing with OpenShift from Node.js.
   
     
 ## Running Tests
-  
-  npm test
+    
+    npm test
+    
+
+##Or for acceptance tests
+    
+    export  OPENSHIFT_USERNAME="unamehere"
+    export OPENSHIFT_PASSWORD="pwdhere"
+    ./node_modules/.bin/turbo test/accept.js
   

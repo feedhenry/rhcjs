@@ -1,3 +1,7 @@
+Release 1.0.0 - 2015-02-18 - Cian Clarke
+------------------------------------------------------
+* Change how domains behave - user must specify a domain to perform Apps API operations.
+
 Release 0.4.0 - 2014-11-06 - Cian Clarke
 ------------------------------------------------------
 * Modify SSH Key Add type parsing to support multiple types
