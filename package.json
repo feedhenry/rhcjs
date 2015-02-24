@@ -1,6 +1,6 @@
 {
   "name": "rhcjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "OpenShift interface, rhc-like, for Node.js.",
   "main": "rhc.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cianclarke/rhcjs.git"
+    "url": "https://github.com/feedhenry/rhcjs.git"
   },
   "keywords": [
     "rhc",
@@ -17,9 +17,9 @@
   "author": "Cian Clarke",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cianclarke/rhcjs/issues"
+    "url": "https://github.com/feedhenry/rhcjs/issues"
   },
-  "homepage": "https://github.com/cianclarke/rhcjs",
+  "homepage": "https://github.com/feedhenry/rhcjs",
   "dependencies": {
     "request": "^2.47.0",
     "underscore": "^1.7.0"
