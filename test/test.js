@@ -7,7 +7,8 @@ module.exports = {
   setUp : function(fin){
     rhc = rhcLib({
       username : 'test@test.com',
-      password : 'test123'
+      password : 'test123',
+      domain : 'test'
     });
     return fin();
   },
