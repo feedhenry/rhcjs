@@ -1,3 +1,7 @@
+Release 1.0.2 - 2015-02-24 - Jason Madigan
+------------------------------------------------------
+* Return responseBody in error handler
+
 Release 1.0.1 - 2015-02-19 - Cian Clarke
 ------------------------------------------------------
 * Better error handling - return status code on errors
