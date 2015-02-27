@@ -1,3 +1,7 @@
+Release 1.0.3 - 2015-02-27 - David Martin
+------------------------------------------------------
+* Add App read by id `rhc.app.read`
+
 Release 1.0.2 - 2015-02-24 - Jason Madigan
 ------------------------------------------------------
 * Return responseBody in error handler
