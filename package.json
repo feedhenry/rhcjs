@@ -4,7 +4,7 @@
   "description": "OpenShift interface, rhc-like, for Node.js.",
   "main": "rhc.js",
   "scripts": {
-    "test": "./node_modules/.bin/turbo test/test.js"
+    "test": "./node_modules/.bin/mocha -A -u exports --recursive -t 10000 test/test.js"
   },
   "repository": {
     "type": "git",
@@ -24,8 +24,8 @@
     "request": "^2.47.0",
     "underscore": "^1.7.0"
   },
-  "devDependencies" : {
-    "turbo-test-runner": "0.3.3",
-    "nock" : "0.48.2"
+  "devDependencies": {
+    "mocha": "^2.1.0",
+    "nock": "0.48.2"
   }
 }
