@@ -134,5 +134,5 @@ This is useful when you need to do a list domains before deciding which one to u
     
     export  OPENSHIFT_USERNAME="unamehere"
     export OPENSHIFT_PASSWORD="pwdhere"
-    ./node_modules/.bin/turbo test/accept.js
+    ./node_modules/.bin/_mocha test/accept.js
   

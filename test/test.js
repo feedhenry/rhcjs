@@ -24,14 +24,21 @@ module.exports = {
       assert.ok(!err, err);
       assert.ok(res);
       return done();
-    })
+    });
   },
   'It should show an app' : function(done){
     rhc.app.show({ app : 'foo' }, function(err, res){
       assert.ok(!err, err);
       assert.ok(res);
       return done();
-    })
+    });
+  },
+  'It should read an app' : function(done){
+    rhc.app.read({ app : '1a' }, function(err, res){
+      assert.ok(!err, err);
+      assert.ok(res);
+      return done();
+    });
   },
   'it should delete an app' : function(done){
     rhc.app.del({app : 'foo'}, function(err, res){
