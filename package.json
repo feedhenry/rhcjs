@@ -1,6 +1,6 @@
 {
   "name": "rhcjs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "OpenShift interface, rhc-like, for Node.js.",
   "main": "rhc.js",
   "scripts": {
