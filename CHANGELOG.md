@@ -1,3 +1,7 @@
+Release 1.0.4 - 2015-03-10 - David Martin
+------------------------------------------------------
+* Return a useful error message for all non 2xx responses
+
 Release 1.0.3 - 2015-02-27 - David Martin
 ------------------------------------------------------
 * Add App read by id `rhc.app.read`
