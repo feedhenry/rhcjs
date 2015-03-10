@@ -124,6 +124,88 @@ This is useful when you need to do a list domains before deciding which one to u
       
     });  
   
+
+### Sample Errors
+
+#### 401
+
+```
+{
+  "responseBody": "<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>401 Authorization Required</title>\n</head><body>\n<h1>Authorization Required</h1>\n<p>This server could not verify that you\nare authorized to access the document\nrequested.  Either you supplied the wrong\ncredentials (e.g., bad password), or your\nbrowser doesn't understand how to supply\nthe credentials required.</p>\n<hr>\n<address>Apache/2.2.15 (Red Hat) Server at openshift.com Port 80</address>\n</body></html>\n",
+  "code": 401,
+  "error": "Not authenticated (401)",
+  "url": "https://invalid:invalid@openshift.com/broker/rest/domain/invalid/applications",
+  "method": "post",
+  "body": {
+    "name": "myfirstapp",
+    "cartridges": [
+      "diy-1.0"
+    ],
+    "initial_git_url": "empty"
+  }
+}
+```
+
+#### 422
+
+```
+{
+  "responseBody": {
+    "api_version": 1.3,
+    "data": null,
+    "messages": [
+      {
+        "exit_code": 100,
+        "field": "name",
+        "index": null,
+        "severity": "error",
+        "text": "The supplied application name 'myfirstapp' already exists"
+      }
+    ],
+    "status": "unprocessable_entity",
+    "supported_api_versions": [],
+    "type": null,
+    "version": "1.3"
+  },
+  "code": 422,
+  "error": "The supplied application name 'myfirstapp' already exists (422)",
+  "url": "https://test%40example.com:password@openshift.com/broker/rest/domain/mydomain/applications",
+  "method": "post",
+  "body": {
+    "name": "myfirstapp",
+    "cartridges": [
+      "diy-0.1"
+    ]
+  }
+}
+```
+
+#### 404
+
+```
+{
+  "responseBody": {
+    "api_version": 1.3,
+    "data": null,
+    "messages": [
+      {
+        "exit_code": 101,
+        "field": null,
+        "index": null,
+        "severity": "error",
+        "text": "Application 'mysecondapp' not found."
+      }
+    ],
+    "status": "not_found",
+    "supported_api_versions": [],
+    "type": null,
+    "version": "1.3"
+  },
+  "code": 404,
+  "error": "Application 'mysecondapp' not found. (404)",
+  "url": "https://test%40example.com:password@openshift.com/broker/rest/domain/mydomain/application/mysecondapp?include=cartridges"
+}
+```
     
 ## Running Tests
     
