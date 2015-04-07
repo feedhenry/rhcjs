@@ -17,6 +17,7 @@ function rhc(params){
   this.app = require('./lib/app')(this);
   this.ssh = require('./lib/ssh')(this);
   this.domains = require('./lib/domains')(this);
+  this.alias = require('./lib/alias')(this);
   
   this.setDomain = function(domain){
     self.domain = domain;
