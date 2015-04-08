@@ -132,15 +132,15 @@ This is useful when you need to do a list domains before deciding which one to u
     
 ## List Aliases
 
-  rhc.alias.create({id : 'appId' }, function(err, aliasesList){
-    
-  });
+    rhc.alias.create({id : 'appId' }, function(err, aliasesList){
+        
+    });
   
 ## Remove Aliases
 
-  rhc.alias.remove({id : 'appId', name : 'aliasName'}, function(err, removeResult){
-    
-  });
+    rhc.alias.remove({id : 'appId', name : 'aliasName'}, function(err, removeResult){
+        
+    });
   
 
 ### Sample Errors
