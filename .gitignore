@@ -17,3 +17,4 @@ coverage/
 *.o
 cov-*
 plato
+accept.sh

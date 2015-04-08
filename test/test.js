@@ -112,6 +112,24 @@ module.exports = {
       
     });
   },
+  'it should add & remove aliases' : function(done){
+    rhc.alias.add({ app : 'foo', name : 'fooAlias'}, function(err, res){
+      assert.ok(!err, err);
+      assert.ok(res);
+      rhc.alias.remove({ app : 'foo', name : 'fooAlias' }, function(err, res){
+        assert.ok(!err, err);
+        assert.ok(res);
+        return done();
+      });
+    });
+  },
+  'it should list aliases' : function(done){
+    rhc.alias.list({ app : 'foo' }, function(err, res){
+      assert.ok(!err, err);
+      assert.ok(res);
+      return done();
+    });
+  },
   'it should skip prefetch when an ID is passed' : function(done){
     // The nock.times call on app show validates this works as expected
     rhc.app.configure({id : '1a', auto_deploy : true}, function(err, res){
