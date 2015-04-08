@@ -123,6 +123,24 @@ This is useful when you need to do a list domains before deciding which one to u
     rhc.authorize(function(err, res){
       
     });  
+
+### Add Alias
+
+    rhc.alias.add({id : 'appId', name : 'aliasName'}, function(err, createResult){
+      
+    });
+    
+## List Aliases
+
+  rhc.alias.create({id : 'appId' }, function(err, aliasesList){
+    
+  });
+  
+## Remove Aliases
+
+  rhc.alias.remove({id : 'appId', name : 'aliasName'}, function(err, removeResult){
+    
+  });
   
 
 ### Sample Errors
@@ -216,5 +234,5 @@ This is useful when you need to do a list domains before deciding which one to u
     
     export  OPENSHIFT_USERNAME="unamehere"
     export OPENSHIFT_PASSWORD="pwdhere"
-    ./node_modules/.bin/_mocha test/accept.js
+    ./node_modules/.bin/mocha -A -u exports --recursive -t 30000 test/accept.js
   
