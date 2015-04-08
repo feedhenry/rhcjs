@@ -1,3 +1,7 @@
+Release 1.1.0 - 2015-04-08 - Cian Clarke
+------------------------------------------------------
+* Add `alias` commands - thanks @alejonext for the contribution!
+
 Release 1.0.4 - 2015-03-10 - David Martin
 ------------------------------------------------------
 * Return a useful error message for all non 2xx responses
