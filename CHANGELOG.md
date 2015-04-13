@@ -1,3 +1,7 @@
+Release 1.1.1 - 2015-04-13 - Gerard Ryan
+------------------------------------------------------
+* Add npm shrinkwrap file
+
 Release 1.1.0 - 2015-04-08 - Cian Clarke
 ------------------------------------------------------
 * Add `alias` commands - thanks @alejonext for the contribution!
